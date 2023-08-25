@@ -1,6 +1,6 @@
 package com.example.common.usecase;
 
-public interface NoUseCaseHandler <E>{
+public interface NoUseCaseHandler <R>{
 
-    E handler();
+    R handle();
 }

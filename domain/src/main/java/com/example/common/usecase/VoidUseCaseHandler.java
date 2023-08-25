@@ -1,6 +1,6 @@
 package com.example.common.usecase;
 
-public interface VoidUseCaseHandler <T extends UseCase>{
+public interface VoidUseCaseHandler <U extends UseCase>{
 
-    void handler(T useCase);
+    void handler(U useCase);
 }

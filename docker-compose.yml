@@ -2,7 +2,7 @@ version: '3'
 services:
   postgres:
     image: postgres:latest
-    container_name: hexagonal-postgres
+    container_name: hexagonal-postgres-v2
     environment:
       POSTGRES_DB: hexagonal
       POSTGRES_USER: postgres
@@ -14,15 +14,15 @@ services:
 
   redis:
     image: redis:latest
-    container_name: hexagonal-redis
+    container_name: hexagonal-redis-v2
     ports:
       - "6379:6379"
 
-  hexagonal-template:
+  hexagonal-template-v2:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: hexagonal-template
+    container_name: hexagonal-template-v2
     ports:
       - "8080:8080"
     depends_on:
